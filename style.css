@@ -1,0 +1,373 @@
+/* general */
+html, body{
+    width: 100%;
+    height: 270vh;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: Times, serif;
+    margin: 0;
+    padding: 0;
+    color: blue;
+}
+body{
+    background-color: #597546 ;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+/* general */
+
+/* navigacijski bar */
+nav{
+    width: 90%;
+    height: 6vh;
+    margin: 5px auto;
+    background-color: #cdd222;
+    box-shadow: inset 1px 2px 3px 2px black;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 100px;
+    grid-gap: 18px;
+    justify-items: end;
+    align-items: center;
+    z-index: 99;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-family:ardestine, sans-serif;
+    color: #213e1b;
+    transition: color .6s ease;
+}
+.home{
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+    margin-top: 6px;
+    font-family: army;
+    font-size: 2.4rem;
+    color: #4b4127;
+}
+nav a:hover{
+    color: #000;
+    border-bottom: #213e1b 3px solid;
+}
+/* navigacijski bar */
+
+/* main */
+main{
+    position: relative;
+    display: grid;
+    grid-template-rows: 3fr 2fr 1fr ;
+    width: 90%;
+    height: 100vh;
+    margin: 5px auto;
+}
+main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.75;
+    z-index: -1;
+    background: url(./images/softballbcg.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 11px;
+}
+#main h1{
+    margin-left: 20px;
+    font-family: army;
+    font-size: 5rem;
+    color: #000;
+    align-self: end;
+}
+#main p{
+    padding: 0;
+    margin-left: 20px;
+    font-family: army;
+    font-size: 2.5rem;
+    color: #000;
+}
+/* main */
+
+/* about us */
+#about{
+    width: 90%;
+    height: 80vh;
+    /* background-color: #baddd1; */
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns:1fr 2fr 4fr;
+    grid-gap: 0.6em;
+    justify-items: start;
+    align-items: start;
+    margin-top: 2em;
+}
+.rightabout , .leftabout{
+    width: 100%;
+    /* margin-top: 2em; */
+    box-shadow: inset 1px 2px 3px 2px black;
+    padding: 0.5em;
+    font-size: 1rem;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    color: #213e1b;
+    background-color: #cdd222;
+}
+.map-holder{
+    /* border: 2px solid black; */
+    /* margin-top: 2em; */
+    width: 100%;
+    height: 35vh;
+    position: relative;
+}
+.map-holder::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    box-shadow: inset 1px 2px 3px 2px black;
+    pointer-events: none;
+}
+
+/* about us */
+
+/* contact info */
+.contact{
+    width: 90%;
+    height: 60vh;
+    /* background-color: #baddd1; */
+    box-shadow: inset 1px 2px 3px 2px black;
+    display: grid; 
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 0.6em;
+    justify-items: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.kartice{
+    width: 100%;
+    height: 75%;
+    background-color: #cdd222;
+    border-radius: 12px;
+    display: flex;
+    align-content: space-around;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.kartice i{
+    font-size: 10rem;
+    height: 50%;
+    color: #4b4127;
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    align-self: flex-start;
+    height: 50%;
+}
+.some-text{
+    color: #213e1b;
+    font-size: 2rem;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    text-align: center;
+    justify-self: center;
+}
+.msngr{
+    color: #0084ff;
+}
+.instgr{
+    color: #812cc2;
+}
+
+
+/* contact info */
+
+/* footer */
+
+.footer-wrap{
+    width: 50%;
+    height: 6rem;
+    margin: 0 auto;
+    /* margin-top: 20rem; */
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #cdd222;
+    box-shadow: inset 1px 2px 3px 2px black;
+}
+.footer-wrap p{
+    color: #0000ad;
+    font-family:'Arial Narrow Bold', sans-serif;
+}
+
+/* footer */
+
+
+
+
+/* fontovi */
+@font-face{
+    font-family: ardestine;
+    src: url(./fonts/ARDESTINE.ttf);
+}
+@font-face{
+    font-family: army;
+    src: url(./fonts/Ver\ Army.ttf);
+}
+/* fontovi */
+
+/* media queries */
+
+@media only screen and (max-width: 1020px) {
+    /* body{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+    } */
+    
+    nav a{
+        text-decoration: none;
+        font-size: 1rem;
+        font-family:ardestine, sans-serif;
+        color: #213e1b;
+        transition: color .6s ease;
+    }
+    .home{
+        justify-self: start;
+        align-self: center;
+        margin-left: 10px;
+        margin-top: 6px;
+        font-family: army;
+        font-size: 1.4rem;
+        color: #4b4127;
+    }
+
+    #about{
+        width: 90%;
+        height: 120vh;
+        /* background-color: #baddd1; */
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(3, 1fr);
+        grid-gap: 0.6em;
+        /* justify-items: start;
+        align-items: start; */
+        margin-top: 2em;
+    }
+    .rightabout , .leftabout{
+        width: 100%;
+        /* margin-top: 2em; */
+        box-shadow: inset 1px 2px 3px 2px black;
+        padding: 0.5em;
+        font-size: 1rem;
+        font-family: 'Lucida Sans Unicode', sans-serif;
+        color: #213e1b;
+        background-color: #cdd222;
+    }
+    .map-holder{
+        /* border: 2px solid black; */
+        /* margin-top: 2em; */
+        width: 100%;
+        height: 35vh;
+        position: absolute;
+        transform: scale(.5) translateX(5rem);
+    }
+    .map-holder::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 98;
+        box-shadow: inset 1px 2px 3px 2px black;
+        pointer-events: none;
+    }
+    .map-holder:hover{
+
+    }
+
+    .contact{
+        width: 90%;
+        height: 50vh;
+        margin-top: auto;
+        /* background-color: #baddd1; */
+        box-shadow: inset 1px 2px 3px 2px black;
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 0.3em;
+        justify-items: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+    .kartice{
+        width: 100%;
+        height: 75%;
+        background-color: #cdd222;
+        border-radius: 12px;
+        display: flex;
+        align-content: space-around;
+        flex-flow:column wrap;
+        justify-content: center;
+    }
+    .kartice i{
+        font-size: 2rem;
+        height: 50%;
+        color: #4b4127;
+        padding: 0;
+        margin: 0;
+    }
+    .logo{
+        align-self: flex-start;
+        height: 50%;
+    }
+    .some-text{
+        color: #213e1b;
+        font-size: 1rem;
+        font-family: 'Lucida Sans Unicode', sans-serif;
+        text-align: center;
+        justify-self: end;
+    }
+    .msngr{
+        color: #0084ff;
+    }
+    .instgr{
+        color: #812cc2;
+    }
+
+    .footer-wrap{
+        width: 50%;
+        height: 6rem;
+        margin: 0 auto;
+        /* margin-top: 20rem; */
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        box-shadow: inset 1px 2px 3px 2px black;
+    }
+    .footer-wrap p{
+        color: #fffffd;
+        font-family:'Arial Narrow Bold', sans-serif;
+        text-align: center;
+    }
+
+}
+
+
+
+
+/* media queries */
